@@ -1,0 +1,14 @@
+*** Settings ***
+Documentation     Defines all required resources and keywords
+...               handling the google search.
+
+
+*** Variables ***
+${Google.Search.Locator.SearchField}    id=lst-ib
+${Google.Search.Locator.SearchResult.Rtomac}    xpath=//a[contains(.,'MarkusBernhardt')]
+
+*** Keywords ***
+Input Text Field
+    [Arguments]    ${ElementXpath}    ${ElementData}
+    Input Text    ${ElementXpath}     ${ElementData}
+    

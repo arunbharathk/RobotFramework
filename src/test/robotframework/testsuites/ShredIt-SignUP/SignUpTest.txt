@@ -1,0 +1,81 @@
+*** Settings ***
+Suite Teardown    Close All Browsers
+Library           Selenium2Library
+Resource          C://Users//abharath//Downloads//robotframework-selenium2library-java-master//src//java//SignUpKeyword//SignUP.txt
+
+*** Variables ***
+${URL Application}    http://shredit-qa.ecentricarts.com/en-us/home
+${shredding-services-URL}    http://shredit-qa.ecentricarts.com/en-us/secure-shredding-services
+${Pricing-URL}    http://shredit-qa.ecentricarts.com/en-us/pricing 
+${resource-center-URL}    http://shredit-qa.ecentricarts.com/en-us/resource-center
+${about-URL}    http://shredit-qa.ecentricarts.com/en-us/about
+${FAQ-URL}     http://shredit-qa.ecentricarts.com/en-us/faqs
+
+
+
+*** Test Cases ***
+
+HomeSignupTest
+    Open Browser    ${URL Application}
+    Maximize Browser Window
+    waitForPageLoaded
+    Input Text Field    //*[@id='p_lt_ctl12_pageplaceholder_p_lt_ctl12_SIR_StayInformedForm_BizForm_FirstName_txtText']    Test 
+    Input Text Field    //*[@id='p_lt_ctl12_pageplaceholder_p_lt_ctl12_SIR_StayInformedForm_BizForm_LastName_txtText']    TestLastName
+    Input Text Field    //*[@id='p_lt_ctl12_pageplaceholder_p_lt_ctl12_SIR_StayInformedForm_BizForm_Email_txtText']    test@ecentricarts.com
+    Input Text Field    //*[@id='p_lt_ctl12_pageplaceholder_p_lt_ctl12_SIR_StayInformedForm_BizForm_Company_txtText']    Ecentricarts
+    Wait Until Element Is Visible    //div[@class='form-element-wrap one_fifth form-button']    30
+    Click Element    //div[@class='form-element-wrap one_fifth form-button']
+
+ServiceSignupTest
+    
+    GoTo    ${shredding-services-URL}
+    Wait Until Element Is Visible    //div[@class='form-element']//input[@id='p_lt_ctl12_pageplaceholder_p_lt_ctl08_SIR_StayInformedForm_BizForm_FirstName_txtText']    40
+    Input Text    //input[@id='p_lt_ctl12_pageplaceholder_p_lt_ctl08_SIR_StayInformedForm_BizForm_FirstName_txtText']     Test
+    Input Text    //*[@id='p_lt_ctl12_pageplaceholder_p_lt_ctl08_SIR_StayInformedForm_BizForm_LastName_txtText']     TestLastName
+    Input Text    //*[@id='p_lt_ctl12_pageplaceholder_p_lt_ctl08_SIR_StayInformedForm_BizForm_Email_txtText']     test@ecentricarts.com
+    Input Text    //*[@id='p_lt_ctl12_pageplaceholder_p_lt_ctl08_SIR_StayInformedForm_BizForm_Company_txtText']     Ecentricarts
+     #waitUntilPageContains    //*[@id='p_lt_ctl12_pageplaceholder_p_lt_ctl08_SIR_StayInformedForm_BizForm_btnOK']    30
+    Click Element    //div[@class='form-element-wrap one_fifth form-button']
+
+    
+PricingSignUpTest
+    
+    GoTo    ${Pricing-URL}
+    waitForPageLoaded
+    Input Text    //*[@id='p_lt_ctl12_pageplaceholder_p_lt_ctl06_SIR_StayInformedForm_BizForm_FirstName_txtText']     Test
+    Input Text    //*[@id='p_lt_ctl12_pageplaceholder_p_lt_ctl06_SIR_StayInformedForm_BizForm_LastName_txtText']     TestLastName
+    Input Text    //*[@id='p_lt_ctl12_pageplaceholder_p_lt_ctl06_SIR_StayInformedForm_BizForm_Email_txtText']     test@ecentricarts.com
+    Input Text    //*[@id='p_lt_ctl12_pageplaceholder_p_lt_ctl06_SIR_StayInformedForm_BizForm_Company_txtText']     Ecentricarts
+    Click Element    //*[@id='p_lt_ctl12_pageplaceholder_p_lt_ctl06_SIR_StayInformedForm_BizForm_btnOK']
+   #homeSignUp
+   
+ResourceCenterSignUpTest
+    
+    GoTo    ${resource-center-URL}
+    waitForPageLoaded
+    Input Text    //*[@id='p_lt_ctl12_pageplaceholder_p_lt_ctl08_DownloadForm_BizForm_FirstName_txtText']     Test
+    Input Text    //*[@id='p_lt_ctl12_pageplaceholder_p_lt_ctl08_DownloadForm_BizForm_LastName_txtText']     TestLastName
+    Input Text    //*[@id='p_lt_ctl12_pageplaceholder_p_lt_ctl08_DownloadForm_BizForm_Email_txtText']     test@ecentricarts.com
+    Input Text    //*[@id='p_lt_ctl12_pageplaceholder_p_lt_ctl08_DownloadForm_BizForm_Company_txtText']     Ecentricarts
+    Click Element    //*[@id='p_lt_ctl12_pageplaceholder_p_lt_ctl08_DownloadForm_BizForm_btnOK']
+    
+    
+AboutSignUpTest
+    
+    GoTo    ${about-URL}
+    waitForPageLoaded
+    Input Text    //*[@id='p_lt_ctl12_pageplaceholder_p_lt_ctl07_SIR_StayInformedForm_BizForm_FirstName_txtText']     Test
+    Input Text    //*[@id='p_lt_ctl12_pageplaceholder_p_lt_ctl07_SIR_StayInformedForm_BizForm_LastName_txtText']     TestLastName
+    Input Text    //*[@id='p_lt_ctl12_pageplaceholder_p_lt_ctl07_SIR_StayInformedForm_BizForm_Email_txtText']     test@ecentricarts.com
+    Input Text    //*[@id='p_lt_ctl12_pageplaceholder_p_lt_ctl07_SIR_StayInformedForm_BizForm_Company_txtText']    Ecentricarts
+    Click Element    //*[@id='p_lt_ctl12_pageplaceholder_p_lt_ctl07_SIR_StayInformedForm_BizForm_btnOK']
+    
+FAQSignUpTest    
+    
+    GoTo    http://shredit-qa.ecentricarts.com/en-us/faqs
+    waitForPageLoaded
+    Input Text    //*[@id='p_lt_ctl12_pageplaceholder_p_lt_ctl07_SIR_StayInformedForm_BizForm_FirstName_txtText']     Test
+    Input Text    //*[@id='p_lt_ctl12_pageplaceholder_p_lt_ctl07_SIR_StayInformedForm_BizForm_LastName_txtText']     TestLastName
+    Input Text    //*[@id='p_lt_ctl12_pageplaceholder_p_lt_ctl07_SIR_StayInformedForm_BizForm_Email_txtText']     test@ecentricarts.com
+    Input Text    //*[@id='p_lt_ctl12_pageplaceholder_p_lt_ctl07_SIR_StayInformedForm_BizForm_Company_txtText']    Ecentricarts
+    Click Element    //*[@id='p_lt_ctl12_pageplaceholder_p_lt_ctl07_SIR_StayInformedForm_BizForm_btnOK']
