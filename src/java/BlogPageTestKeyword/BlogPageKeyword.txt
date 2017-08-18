@@ -1,0 +1,52 @@
+*** Settings ***
+Documentation     Defines all required resources and keywords
+...               handling the google search.
+Library           Selenium2Library
+
+*** Variables ***
+${RssLinkVerificationURL}    http://shredit-qa.ecentricarts.com/en-us/blog/securing-your-information
+
+*** Keywords ***
+
+Navigate to blog section
+    
+    waitForPageLoaded
+    Wait Until Element Is Visible    //a[@href='/Blog/Securing-your-information']    30    
+    Click Link    //a[@href='/Blog/Securing-your-information']    
+    Page Should Contain Element    //div[@class='slider']/ul[@class='slides']/li[1]
+    
+    
+continue Reading LinkVerification
+    
+    
+    Wait Until Element Is Visible    xpath=//ul[@class='listing']//li[1]//p[@class='btn arrow']/a[1]    60    
+    Click Element     xpath=//ul[@class='listing']//li[1]//p[@class='btn arrow']/a[1]
+    waitForPageLoaded
+    Page Should Contain Element    //div[@class='blog-post']
+
+emailValidation
+    
+    waitForPageLoaded
+    Input Text    xpath=//input[@id='p_lt_ctl12_pageplaceholder_p_lt_ctl02_SIR_BizForm_Full_page_BizForm_Email_txtText']    automation@ecentricarts.com
+    Click Element    xpath=//input[@id='p_lt_ctl12_pageplaceholder_p_lt_ctl02_SIR_BizForm_Full_page_BizForm_btnOK']
+    Page Should Contain Element    xpath=//section [@class='cta-wrap'][1]
+
+archivesRightRail
+    
+    Page Should Contain Element    //*[@id='post-archives']
+
+olderPosts
+    
+    Page Should Contain Element    //input[@class='FormButton older-posts']
+
+
+RssLinkVerification
+    
+    Goto    ${RssLinkVerificationURL}
+    waitForPageLoaded
+    Wait Until Element Is Visible    //p[@class='blog-subscribe-rss']/a    30
+    Click Link    //a[@href='http://feeds.feedburner.com/ShredIt/Securing-Your-Information']
+    Page Should Contain Element    //a[@href='https://www.shredit.com/']
+    
+    
+

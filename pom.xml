@@ -182,7 +182,7 @@
 						</goals>
 						<configuration>
 							<logLevel>debug</logLevel>
-							<testCasesDirectory>${project.basedir}/src/test/robotframework/testsuites</testCasesDirectory>
+							<testCasesDirectory>${project.basedir}/src/test/robotframework/testsuites//ShredIt-SignUP/SignUpTest.txt</testCasesDirectory>
 						</configuration>
 					</execution>
 					<execution>

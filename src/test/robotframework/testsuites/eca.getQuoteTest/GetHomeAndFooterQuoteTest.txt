@@ -1,0 +1,84 @@
+*** Settings ***
+        
+Suite Teardown    Close All Browsers
+Suite Setup       Open Browser    http://shredit-qa.ecentricarts.com/en-us/home
+
+Library           Selenium2Library
+Resource           ../../../../java//getQuoteKeyword//GetQuote.txt
+
+*** Variables ***
+
+
+
+
+*** Test Cases ***
+
+homeOnePurgeQuote
+    
+    Maximize Browser Window
+    Home Page - Select Quote Page     Home
+    Select Service    OneTimePurgePaper
+    Enter Company Info Details
+    Enter you Info details
+    Enter Additional Info Details
+    Close Quote Modal
+
+homeRegularPaperQuote
+    Home Page - Select Quote Page     Home
+    Select Service    RegularPaper
+    Enter Company Info Details
+    Enter you Info details
+    Enter Additional Info Details
+    Close Quote Modal
+    
+    
+homeHardDriveQuote
+    Home Page - Select Quote Page     Home
+    Select Service    PurgeHardDrive
+    Enter Company Info Details
+    Enter you Info details
+    Enter Additional Info Details
+    Close Quote Modal
+    
+
+homeOtherMaterialQuote
+    Home Page - Select Quote Page     Home
+    Select Service    OtherMaterial
+    Enter Company Info Details
+    Enter you Info details
+    Enter Additional Info Details
+    Close Quote Modal
+    
+    
+footerOnePurgeQuote
+    
+    Home Page - Select Quote Page     FooterShredding
+    Select Service    OneTimePurgePaper
+    Enter Company Info Details
+    Enter you Info details
+    Enter Additional Info Details
+    Close Quote Modal
+    
+footerRegularPaperQuote
+    Home Page - Select Quote Page     FooterShredding
+    Select Service    RegularPaper
+    Enter Company Info Details
+    Enter you Info details
+    Enter Additional Info Details
+    Close Quote Modal
+    
+footerHardDriveQuote
+    Home Page - Select Quote Page     FooterShredding
+    Select Service    PurgeHardDrive
+    Enter Company Info Details
+    Enter you Info details
+    Enter Additional Info Details
+    Close Quote Modal
+    
+footerOtherMaterialQuote
+    Home Page - Select Quote Page     FooterShredding
+    Select Service    OtherMaterial
+    Enter Company Info Details
+    Enter you Info details
+    Enter Additional Info Details
+    Close Quote Modal

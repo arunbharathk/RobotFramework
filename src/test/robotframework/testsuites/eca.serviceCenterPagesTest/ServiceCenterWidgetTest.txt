@@ -1,0 +1,36 @@
+*** Settings ***
+        
+Suite Teardown    Close All Browsers
+Suite Setup       Open Browser    http://shredit-qa.ecentricarts.com/en-us/home
+
+Library           Selenium2Library
+Resource           ../../../../java//getQuoteKeyword//GetQuote.txt
+Resource           ../../../../java//ServiceCenterPagesKeyword/ServiceCenterPages.txt
+
+*** Variables ***
+
+
+*** Test Cases ***
+
+testTitleVerification
+    Maximize Browser Window
+    Change Location By Postal Code
+    verify Get a Quote Modal
+    Element Text Should Be    //div[@class='stationary']//div[@class='grid_4']/h2[1]    Shred-it Los Angeles
+    
+   
+testDescriptionVerification
+    
+    Element Text Should Be    //div[@id='page-content']//section[2]/h1    Paper Shredding and Hard Drive Destruction Los Angeles
+    
+testCommunitieServed
+    
+     Communitties Served 
+    
+testBottomRail
+    
+    verify Bottom Rail
+    
+testHeaderContactNumber
+    
+    Verify Header ContactNumber

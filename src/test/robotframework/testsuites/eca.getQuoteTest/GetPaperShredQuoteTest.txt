@@ -1,0 +1,128 @@
+*** Settings ***
+        
+Suite Teardown    Close All Browsers
+Suite Setup       Open Browser    http://shredit-qa.ecentricarts.com/en-us/home
+
+Library           Selenium2Library
+Resource           ../../../../java//getQuoteKeyword//GetQuote.txt
+
+*** Variables ***
+
+
+
+*** Test Cases ***
+
+paperShred_Header_OneTimePaperQuote
+    
+    Maximize Browser Window
+    Home Page - Select Quote Page     PaperShredding
+    Hard Drive Destruction Page - Select Quote    HeaderQuote
+    Select Service    OneTimePurgePaper
+    Enter Company Info Details
+    Enter you Info details
+    Enter Additional Info Details
+    Close Quote Modal
+    
+paperShred_Header_RegularPaperQuote
+    Hard Drive Destruction Page - Select Quote    HeaderQuote
+    Select Service    RegularPaper
+    Enter Company Info Details
+    Enter you Info details
+    Enter Additional Info Details
+    Close Quote Modal
+
+paperShred_Header_HardDriveQuote
+    Hard Drive Destruction Page - Select Quote    HeaderQuote
+    Select Service    PurgeHardDrive
+    Enter Company Info Details
+    Enter you Info details
+    Enter Additional Info Details
+    Close Quote Modal
+
+paperShred_Header_OtherMaterialQuote
+    
+    Hard Drive Destruction Page - Select Quote    HeaderQuote
+    Select Service    OtherMaterial
+    Enter Company Info Details
+    Enter you Info details
+    Enter Additional Info Details
+    Close Quote Modal
+    
+    
+    
+paperShredding_OneTime_PaperQuote
+    
+    Hard Drive Destruction Page - Select Quote    OneTimePapershredding
+    Select Service    OneTimePurgePaper
+    Enter Company Info Details
+    Enter you Info details
+    Enter Additional Info Details
+    Close Quote Modal
+    
+    
+    
+paperShredding_OneTime_RegularPaperQuote
+    
+     Hard Drive Destruction Page - Select Quote    OneTimePapershredding
+    Select Service    RegularPaper
+    Enter Company Info Details
+    Enter you Info details
+    Enter Additional Info Details
+    Close Quote Modal
+    
+paperShredding_OneTime_HardDriveQuote
+    
+     Hard Drive Destruction Page - Select Quote    OneTimePapershredding
+    Select Service    PurgeHardDrive
+    Enter Company Info Details
+    Enter you Info details
+    Enter Additional Info Details
+    Close Quote Modal
+    
+paperShredding_OneTime_OtherMaterialQuote
+    
+     Hard Drive Destruction Page - Select Quote    OneTimePapershredding
+    Select Service    OtherMaterial
+    Enter Company Info Details
+    Enter you Info details
+    Enter Additional Info Details
+    Close Quote Modal
+
+
+
+paperShredding_Regularly_PaperQuote
+    
+    Hard Drive Destruction Page - Select Quote    RegularPapershredding
+    Select Service    OneTimePurgePaper
+    Enter Company Info Details
+    Enter you Info details
+    Enter Additional Info Details
+    Close Quote Modal
+    
+
+paperShredding_Regularly_RegularPaperQuote
+    
+    Hard Drive Destruction Page - Select Quote    RegularPapershredding
+    Select Service    RegularPaper
+    Enter Company Info Details
+    Enter you Info details
+    Enter Additional Info Details
+    Close Quote Modal
+    
+paperShredding_Regularly_HardDriveQuote
+    
+    Hard Drive Destruction Page - Select Quote    RegularPapershredding
+    Select Service    PurgeHardDrive
+    Enter Company Info Details
+    Enter you Info details
+    Enter Additional Info Details
+    Close Quote Modal
+    
+paperShredding_Regularly_OtherMaterialQuote
+    
+    Hard Drive Destruction Page - Select Quote    RegularPapershredding
+    Select Service    OtherMaterial
+    Enter Company Info Details
+    Enter you Info details
+    Enter Additional Info Details
+    Close Quote Modal

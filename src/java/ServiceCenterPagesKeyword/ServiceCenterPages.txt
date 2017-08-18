@@ -1,0 +1,70 @@
+*** Settings ***
+Documentation     Defines all required resources and keywords
+...               
+Library           Selenium2Library
+
+*** Variables ***
+
+
+
+*** Keywords ***
+
+
+Change Location By Postal Code
+    
+    waitForPageLoaded
+    Click Element    //li[@class='location']/a
+    Wait Until Element Is Visible    //nav[@id='p_lt_ctl05_SIR_UtilityNavigation_Nav1']/ul/li[1]/div    40
+    Input Text    //nav[@id='p_lt_ctl05_SIR_UtilityNavigation_Nav1']//input[@name='location']    90001
+    Click Element    //nav[@id='p_lt_ctl05_SIR_UtilityNavigation_Nav1']//input[@class='submit']
+
+
+verify Get a Quote Modal
+    
+    waitForPageLoaded
+    Page Should Contain Element    xpath=//div[@class='gaq_page_multistep hasPadding']
+    
+Verify Final Quote PopUP
+    
+    waitForPageLoaded
+    Page Should Contain Element   //*[@id='p_lt_ctl12_pageplaceholder_p_lt_ctl07_SIR_BizForm_Full_page_MultiStep_FormUpdatePanel']//h2
+    
+    
+Enter your company Info - region based
+    
+   Click Element    //div[@id='Step1-next']/a
+   Wait Until Element Is Visible    //div[@id='Step2' and contains(@style,'display: block')]//input[@id='p_lt_ctl12_pageplaceholder_p_lt_ctl07_SIR_BizForm_Full_page_MultiStep_BizForm_Company_txtText']    40
+   Input Text     //div[@id='Step2' and contains(@style,'display: block')]//input[@id='p_lt_ctl12_pageplaceholder_p_lt_ctl07_SIR_BizForm_Full_page_MultiStep_BizForm_Company_txtText']    testEcentricarts    
+   Input Text     //div[@id='Step2' and contains(@style,'display: block')]//input[@id='p_lt_ctl12_pageplaceholder_p_lt_ctl07_SIR_BizForm_Full_page_MultiStep_BizForm_PostalCode_txtText']    M1P8AI
+   Click Element     //div[@id='Step2-next']/a 
+   
+   
+Enter you Info - region based
+    
+    Wait Until Element Is Visible    //div[@id='Step3' and contains(@style,'display: block')]//*[@id='p_lt_ctl12_pageplaceholder_p_lt_ctl07_SIR_BizForm_Full_page_MultiStep_BizForm_FirstName_txtText']    40
+    Input Text     //div[@id='Step3' and contains(@style,'display: block')]//*[@id='p_lt_ctl12_pageplaceholder_p_lt_ctl07_SIR_BizForm_Full_page_MultiStep_BizForm_FirstName_txtText']    TestQA    
+    Input Text     //div[@id='Step3' and contains(@style,'display: block')]//*[@id='p_lt_ctl12_pageplaceholder_p_lt_ctl07_SIR_BizForm_Full_page_MultiStep_BizForm_LastName_txtText']    Ecentricarts
+    Input Text     //div[@id='Step3' and contains(@style,'display: block')]//*[@id='p_lt_ctl12_pageplaceholder_p_lt_ctl07_SIR_BizForm_Full_page_MultiStep_BizForm_Phone_txtText']    6578941252
+    Input Text    //div[@id='Step3' and contains(@style,'display: block')]//*[@id='p_lt_ctl12_pageplaceholder_p_lt_ctl07_SIR_BizForm_Full_page_MultiStep_BizForm_Email_txtText']    testQA@ecentricarts.com
+    Click Element    //div[@id='Step3-next']/a
+    
+Enter Additional Info - region based
+    
+    Wait Until Element Is Visible    //div[@id='Step4' and contains(@style,'display: block')]//h3    40
+    Input Text     //div[@id='Step4' and contains(@style,'display: block')]//*[@id='p_lt_ctl12_pageplaceholder_p_lt_ctl07_SIR_BizForm_Full_page_MultiStep_BizForm_Comments_txtText']    TestQA 
+    Click Element    xpath=//*[@id='p_lt_ctl12_pageplaceholder_p_lt_ctl07_SIR_BizForm_Full_page_MultiStep_BizForm_btnOK']
+ 
+Communitties Served   
+    
+    Element Should Contain    //div[@class='stationary']//div[@class='grid_4']/h2[1]    Los Angeles
+    Element Should Contain    //div[@id='page-content']//section[2]/h1    Los Angeles
+    
+verify Bottom Rail
+    
+    Page Should Contain Element    xpath=.//*[@id='wrapper']/footer/div
+
+Verify Header ContactNumber    
+    
+    Element Should Contain    //nav[@class='secondary-nav']//li[@class='utility tel-branch']/span    562.321.5809
+    Element Should Contain    //nav[@class='secondary-nav']//li[@class='utility tel-tollfree']/span    888.750.6450
+    

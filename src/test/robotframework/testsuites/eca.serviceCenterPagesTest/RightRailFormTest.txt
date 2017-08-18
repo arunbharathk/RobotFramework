@@ -1,0 +1,54 @@
+*** Settings ***
+        
+Suite Teardown    Close All Browsers
+Suite Setup       Open Browser    http://shredit-qa.ecentricarts.com/en-us/home
+
+Library           Selenium2Library
+Resource           ../../../../java//getQuoteKeyword//GetQuote.txt
+Resource           ../../../../java//ServiceCenterPagesKeyword/ServiceCenterPages.txt
+
+*** Variables ***
+
+
+*** Test Cases ***
+
+testRequestQuoteDisplay
+    
+    Maximize Browser Window
+    Change Location By Postal Code
+    verify Get a Quote Modal
+    
+testRequestAQuotePurgePaper
+    
+    Select Service    OneTimePurgePaper
+    Enter your company Info - region based
+    Enter you Info - region based
+    Enter Additional Info - region based
+    Verify Final Quote PopUP
+    
+testRequestAQuoteRegularPaper
+    
+    Reload Page
+    Select Service    RegularPaper
+    Enter your company Info - region based
+    Enter you Info - region based
+    Enter Additional Info - region based
+    Verify Final Quote PopUP
+    
+testRequestAQuotePurgeHardDrive
+    
+    Reload Page
+    Select Service    PurgeHardDrive
+    Enter your company Info - region based
+    Enter you Info - region based
+    Enter Additional Info - region based
+    Verify Final Quote PopUP
+    
+testRequestAQuoteOther 
+    
+    Reload Page
+    Select Service    OtherMaterial
+    Enter your company Info - region based
+    Enter you Info - region based
+    Enter Additional Info - region based
+    Verify Final Quote PopUP           

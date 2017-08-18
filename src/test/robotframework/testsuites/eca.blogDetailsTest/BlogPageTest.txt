@@ -1,0 +1,42 @@
+*** Settings ***
+
+Suite Teardown    Close All Browsers
+Library           Selenium2Library
+#Resource          C://Users//abharath//Downloads//robotframework-selenium2library-java-master//src//java//SignUpKeyword//SignUP.txt
+Resource           ../../../../java//BlogPageTestKeyword//BlogPageKeyword.txt
+
+*** Variables ***
+
+${URL Application}    http://shredit-qa.ecentricarts.com/en-us/home
+
+
+*** Test Cases ***
+
+Test ContinueReading Link
+    [Documentation]    To Test the Continue reading link is clickable.
+    Open Browser    ${URL Application}
+    Maximize Browser Window
+    Navigate to blog section    
+    continue Reading LinkVerification
+
+
+Test SubscribeBlog
+    [Documentation]    To Test the subscribe blog is present in the page or not.
+    Page Should Contain Element    xpath=//div[@id='p_lt_ctl12_pageplaceholder_p_lt_ctl02_SIR_BizForm_Full_page_FormUpdatePanel']
+     
+
+Test EmailValidation
+    [Documentation]    To Test the Email validation with valid email.
+    emailValidation
+
+Test ArchivesRightRail
+    [Documentation]    To Test the Right Rail Archives will available in the webPage.
+    archivesRightRail
+    
+Test OlderPosts
+    [Documentation]    Ensure that the OlderPosts button should available in the webpage.
+    olderPosts
+
+Test RssLinkVerification
+    [Documentation]    Ensure that  RSS LinkVerification link is clickable and check whether the navigating page is correct.
+    RssLinkVerification            

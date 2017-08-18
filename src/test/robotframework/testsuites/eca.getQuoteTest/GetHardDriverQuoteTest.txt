@@ -1,0 +1,124 @@
+*** Settings ***
+
+        
+Suite Teardown    Close All Browsers
+Suite Setup       Open Browser    http://shredit-qa.ecentricarts.com/en-us/home
+
+Library           Selenium2Library
+Resource           ../../../../java//getQuoteKeyword//GetQuote.txt
+
+*** Variables ***
+
+
+*** Test Cases ***
+
+Hard Drive Destruction -- Header Get Quote
+    [Documentation]   Goto to HD destrction page ---> Click Header Get Quote  ---> Select HardDriveShredding type ---> Enter company Info ---> Enter Your Info ---> Enter Additional Info ---> Submit and verify Thankyou message is poped out
+    Maximize Browser Window
+    Home Page - Select Quote Page     HardDriveShredding
+    Hard Drive Destruction Page - Select Quote    HeaderQuote
+    Select Service    OneTimePurgePaper
+    Enter Company Info Details
+    Enter you Info details
+    Enter Additional Info Details
+    Close Quote Modal
+    
+hdDestruction_Header_RegularPaperQuote
+    Hard Drive Destruction Page - Select Quote    HeaderQuote
+    Select Service    RegularPaper
+    Enter Company Info Details
+    Enter you Info details
+    Enter Additional Info Details
+    Close Quote Modal
+    
+hdDestruction_Header_HardDriveQuote
+   Hard Drive Destruction Page - Select Quote    HeaderQuote
+    Select Service    PurgeHardDrive
+    Enter Company Info Details
+    Enter you Info details
+    Enter Additional Info Details
+    Close Quote Modal
+    
+hdDestruction_Header_OtherMaterialQuote
+    
+    Hard Drive Destruction Page - Select Quote    HeaderQuote
+     Select Service    OtherMaterial
+    Enter Company Info Details
+    Enter you Info details
+    Enter Additional Info Details
+    Close Quote Modal
+    
+    
+hdDestruction_Shearing_PaperQuote
+    
+    Hard Drive Destruction Page - Select Quote    HDShearing
+     Select Service    OneTimePurgePaper
+    Enter Company Info Details
+    Enter you Info details
+    Enter Additional Info Details
+    Close Quote Modal
+    
+hdDestruction_Shearing__RegularPaperQuote
+    
+     Hard Drive Destruction Page - Select Quote    HDShearing
+     Select Service    RegularPaper
+    Enter Company Info Details
+    Enter you Info details
+    Enter Additional Info Details
+    Close Quote Modal
+    
+hdDestruction_Shearing__HardDriveQuote
+    
+     Hard Drive Destruction Page - Select Quote    HDShearing
+     Select Service    PurgeHardDrive
+    Enter Company Info Details
+    Enter you Info details
+    Enter Additional Info Details
+    Close Quote Modal
+    
+hdDestruction_Shearing__OtherMaterialQuote
+    
+     Hard Drive Destruction Page - Select Quote    HDShearing
+     Select Service    OtherMaterial
+    Enter Company Info Details
+    Enter you Info details
+    Enter Additional Info Details
+    Close Quote Modal
+    
+hdDestruction_HDCrushing_PaperQuote
+    
+    Hard Drive Destruction Page - Select Quote    HDCrushing
+    Select Service    OneTimePurgePaper
+    Enter Company Info Details
+    Enter you Info details
+    Enter Additional Info Details
+    Close Quote Modal
+    
+    
+
+hdDestruction_Crushing_RegularPaperQuote
+    
+    Hard Drive Destruction Page - Select Quote    HDCrushing
+    Select Service    RegularPaper
+    Enter Company Info Details
+    Enter you Info details
+    Enter Additional Info Details
+    Close Quote Modal
+    
+hdDestruction_Crushing_HardDriveQuote
+    
+    Hard Drive Destruction Page - Select Quote    HDCrushing
+    Select Service    PurgeHardDrive
+    Enter Company Info Details
+    Enter you Info details
+    Enter Additional Info Details
+    Close Quote Modal
+    
+hdDestruction_Crushing_OtherMaterialQuote 
+    
+    Hard Drive Destruction Page - Select Quote    HDCrushing
+    Select Service    OtherMaterial
+    Enter Company Info Details
+    Enter you Info details
+    Enter Additional Info Details
+    Close Quote Modal                                                           

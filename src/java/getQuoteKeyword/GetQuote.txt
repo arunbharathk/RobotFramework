@@ -1,0 +1,65 @@
+*** Settings ***
+Documentation     Defines all required resources and keywords
+...               handling the google search.
+Library           Selenium2Library
+
+*** Variables ***
+${RssLinkVerificationURL}    http://shredit-qa.ecentricarts.com/en-us/home
+
+*** Keywords ***
+
+Home Page - Select Quote Page    [Arguments]    ${QuoteType}
+    [Documentation]   Hard Drive Destruction -- Header Get a Quote.
+    waitForPageLoaded
+    Run Keyword If    '${QuoteType}' == 'Home'    Click Link    //a[@href='/en-us/get-a-quote-form']  
+    Run Keyword If    '${QuoteType}' == 'PaperShredding'    Click Link    //a[@href='/en-us/secure-shredding-services/paper-shredding-services']
+    Run Keyword If    '${QuoteType}' == 'HardDriveShredding'    Click Element    //div[@class='container_12 services']//a[@href='/en-us/secure-shredding-services/hard-drive-destruction']
+    Run Keyword If    '${QuoteType}' == 'FooterShredding'    Click Link    //footer[@role='footer']//a[@href='/en-us/request-quote']
+    
+    
+Hard Drive Destruction Page - Select Quote    [Arguments]    ${QuoteType}
+    [Documentation]   Hard Drive Destruction -- Header Get a Quote.
+    waitForPageLoaded
+    Run Keyword If    '${QuoteType}' == 'HeaderQuote'    Click Link    //div[@id='wrapper']//header[@role='banner']//a[@href='/en-us/request-quote']  
+    Run Keyword If    '${QuoteType}' == 'HDShearing'    Click Element    //div[@id='page-content']/section[2]/div/div[1]/div[2]/p[2]/a
+    Run Keyword If    '${QuoteType}' == 'HDCrushing'    Click Element    //div[@id='page-content']/section[2]/div/div[2]/div[2]/p[2]/a
+    Run Keyword If    '${QuoteType}' == 'OneTimePapershredding'    Click Element    //div[@id='page-content']/section[2]/div/div[1]/div[2]/p/a
+    Run Keyword If    '${QuoteType}' == 'RegularPapershredding'    Click Element    //div[@id='page-content']/section[2]/div/div[1]/div[2]/p/a
+    
+Select Service    [Arguments]    ${serviceType} 
+    [Documentation]   Select any service and Completed the follow to got Quote.
+    waitForPageLoaded
+    Run Keyword If    '${serviceType}' == 'OneTimePurgePaper'    Click Element    //label[@class='PurgePaper']/span  
+    Run Keyword If    '${serviceType}' == 'RegularPaper'    Click Element    //label[@class='RegularPaper']/span
+    Run Keyword If    '${serviceType}' == 'PurgeHardDrive'    Click Element    //label[@class='PurgeHardDrive']/span    
+    Run Keyword If    '${serviceType}' == 'OtherMaterial'    Click Element    //label[@class='OtherOther']/span
+    
+Enter Company Info Details  
+    
+   Click Element    //div[@id='Step1-next']/a
+   Wait Until Element Is Visible    //div[@id='Step2' and contains(@style,'display: block')]//input[@id='p_lt_ctl22_SIR_BizForm_Full_page_MultiStep_BizForm_Company_txtText']    40
+   Input Text     //div[@id='Step2' and contains(@style,'display: block')]//input[@id='p_lt_ctl22_SIR_BizForm_Full_page_MultiStep_BizForm_Company_txtText']    testEcentricarts    
+   Input Text     //div[@id='Step2' and contains(@style,'display: block')]//.//*[@id='p_lt_ctl22_SIR_BizForm_Full_page_MultiStep_BizForm_PostalCode_txtText']    M1P8AI
+   Click Element     //div[@id='Step2-next']/a
+    
+Enter you Info details
+    
+    Wait Until Element Is Visible    //div[@id='Step3' and contains(@style,'display: block')]//input[@id='p_lt_ctl22_SIR_BizForm_Full_page_MultiStep_BizForm_FirstName_txtText']    40
+    Input Text     //div[@id='Step3' and contains(@style,'display: block')]//input[@id='p_lt_ctl22_SIR_BizForm_Full_page_MultiStep_BizForm_FirstName_txtText']    TestQA    
+    Input Text     //div[@id='Step3' and contains(@style,'display: block')]//input[@id='p_lt_ctl22_SIR_BizForm_Full_page_MultiStep_BizForm_LastName_txtText']    Ecentricarts
+    Input Text     //div[@id='Step3' and contains(@style,'display: block')]//*[@id='p_lt_ctl22_SIR_BizForm_Full_page_MultiStep_BizForm_Phone_txtText']    6578941252
+    Input Text    //div[@id='Step3' and contains(@style,'display: block')]//input[@id='p_lt_ctl22_SIR_BizForm_Full_page_MultiStep_BizForm_Email_txtText']    testQA@ecentricarts.com
+    Click Element    //div[@id='Step3-next']/a
+    
+Enter Additional Info Details
+    
+    Wait Until Element Is Visible    //div[@id='Step4' and contains(@style,'display: block')]//*[@id='p_lt_ctl22_SIR_BizForm_Full_page_MultiStep_BizForm_Comments_txtText']    40
+    Input Text     //div[@id='Step4' and contains(@style,'display: block')]//*[@id='p_lt_ctl22_SIR_BizForm_Full_page_MultiStep_BizForm_Comments_txtText']    TestQA 
+    Click Element    //input[@id='p_lt_ctl22_SIR_BizForm_Full_page_MultiStep_BizForm_btnOK']
+    
+Close Quote Modal
+    
+    Wait Until Element Is Visible    //div[@class='inner' and contains(@style,'display: block')]//a[@href='']    40
+    Click Element    xpath=//div[@class='inner' and contains(@style,'display: block')]//a[@href='']
+    Page Should Not Contain Element    xpath=//div[@class='inner' and contains(@style,'display: block')]//a[@href='']
+    

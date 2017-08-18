@@ -1,0 +1,540 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generated="20170816 17:54:48.309" generator="Robot 3.0.2 (Python 2.7.11 on win32)">
+<suite source="C:\Users\abharath\Downloads\robotframework-selenium2library-java-master" id="s1" name="Robotframework-Selenium2Library-Java-Master">
+<suite source="C:\Users\abharath\Downloads\robotframework-selenium2library-java-master\src" id="s1-s1" name="Src">
+<suite source="C:\Users\abharath\Downloads\robotframework-selenium2library-java-master\src\test" id="s1-s1-s1" name="Test">
+<suite source="C:\Users\abharath\Downloads\robotframework-selenium2library-java-master\src\test\robotframework" id="s1-s1-s1-s1" name="Robotframework">
+<suite source="C:\Users\abharath\Downloads\robotframework-selenium2library-java-master\src\test\robotframework\testsuites" id="s1-s1-s1-s1-s1" name="Testsuites">
+<suite source="C:\Users\abharath\Downloads\robotframework-selenium2library-java-master\src\test\robotframework\testsuites\eca.blogDetailsTest" id="s1-s1-s1-s1-s1-s1" name="eca.blogDetailsTest">
+<suite source="C:\Users\abharath\Downloads\robotframework-selenium2library-java-master\src\test\robotframework\testsuites\eca.blogDetailsTest\BlogPageTest.txt" id="s1-s1-s1-s1-s1-s1-s1" name="BlogPageTest">
+<test id="s1-s1-s1-s1-s1-s1-s1-t1" name="Test ContinueReading Link">
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to given URL.</doc>
+<arguments>
+<arg>${URL Application}</arg>
+</arguments>
+<msg timestamp="20170816 17:54:48.818" level="INFO">Opening browser 'firefox' to base url 'http://shredit-qa.ecentricarts.com/en-us/home'</msg>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<msg timestamp="20170816 17:54:48.833" level="FAIL">No browser is open</msg>
+<status status="FAIL" endtime="20170816 17:54:48.834" starttime="20170816 17:54:48.830"></status>
+</kw>
+<msg timestamp="20170816 17:54:48.834" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: No browser is open</msg>
+<msg timestamp="20170816 17:54:48.835" level="FAIL">WebDriverException: Message: 'geckodriver' executable needs to be in PATH. 
+</msg>
+<status status="FAIL" endtime="20170816 17:54:48.835" starttime="20170816 17:54:48.817"></status>
+</kw>
+<doc>To Test the Continue reading link is clickable.</doc>
+<status status="FAIL" endtime="20170816 17:54:48.836" critical="yes" starttime="20170816 17:54:48.816">WebDriverException: Message: 'geckodriver' executable needs to be in PATH. 
+</status>
+</test>
+<test id="s1-s1-s1-s1-s1-s1-s1-t2" name="Test SubscribeBlog">
+<kw name="Page Should Contain Element" library="Selenium2Library">
+<doc>Verifies element identified by `locator` is found on the current page.</doc>
+<arguments>
+<arg>xpath=//div[@id='p_lt_ctl12_pageplaceholder_p_lt_ctl02_SIR_BizForm_Full_page_FormUpdatePanel']</arg>
+</arguments>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<msg timestamp="20170816 17:54:48.839" level="FAIL">No browser is open</msg>
+<status status="FAIL" endtime="20170816 17:54:48.839" starttime="20170816 17:54:48.838"></status>
+</kw>
+<msg timestamp="20170816 17:54:48.840" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: No browser is open</msg>
+<msg timestamp="20170816 17:54:48.841" level="FAIL">No browser is open</msg>
+<status status="FAIL" endtime="20170816 17:54:48.841" starttime="20170816 17:54:48.837"></status>
+</kw>
+<doc>To Test the subscribe blog is present in the page or not.</doc>
+<status status="FAIL" endtime="20170816 17:54:48.841" critical="yes" starttime="20170816 17:54:48.837">No browser is open</status>
+</test>
+<test id="s1-s1-s1-s1-s1-s1-s1-t3" name="Test EmailValidation">
+<kw name="emailValidation" library="BlogPageKeyword">
+<kw name="waitForPageLoaded">
+<msg timestamp="20170816 17:54:48.846" level="FAIL">No keyword with name 'waitForPageLoaded' found.</msg>
+<status status="FAIL" endtime="20170816 17:54:48.846" starttime="20170816 17:54:48.846"></status>
+</kw>
+<status status="FAIL" endtime="20170816 17:54:48.846" starttime="20170816 17:54:48.842"></status>
+</kw>
+<doc>To Test the Email validation with valid email.</doc>
+<status status="FAIL" endtime="20170816 17:54:48.847" critical="yes" starttime="20170816 17:54:48.842">No keyword with name 'waitForPageLoaded' found.</status>
+</test>
+<test id="s1-s1-s1-s1-s1-s1-s1-t4" name="Test ArchivesRightRail">
+<kw name="archivesRightRail" library="BlogPageKeyword">
+<kw name="Page Should Contain Element" library="Selenium2Library">
+<doc>Verifies element identified by `locator` is found on the current page.</doc>
+<arguments>
+<arg>//*[@id='post-archives']</arg>
+</arguments>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<msg timestamp="20170816 17:54:48.850" level="FAIL">No browser is open</msg>
+<status status="FAIL" endtime="20170816 17:54:48.850" starttime="20170816 17:54:48.849"></status>
+</kw>
+<msg timestamp="20170816 17:54:48.850" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: No browser is open</msg>
+<msg timestamp="20170816 17:54:48.851" level="FAIL">No browser is open</msg>
+<status status="FAIL" endtime="20170816 17:54:48.851" starttime="20170816 17:54:48.848"></status>
+</kw>
+<status status="FAIL" endtime="20170816 17:54:48.851" starttime="20170816 17:54:48.848"></status>
+</kw>
+<doc>To Test the Right Rail Archives will available in the webPage.</doc>
+<status status="FAIL" endtime="20170816 17:54:48.852" critical="yes" starttime="20170816 17:54:48.847">No browser is open</status>
+</test>
+<test id="s1-s1-s1-s1-s1-s1-s1-t5" name="Test OlderPosts">
+<kw name="olderPosts" library="BlogPageKeyword">
+<kw name="Page Should Contain Element" library="Selenium2Library">
+<doc>Verifies element identified by `locator` is found on the current page.</doc>
+<arguments>
+<arg>//input[@class='FormButton older-posts']</arg>
+</arguments>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<msg timestamp="20170816 17:54:48.855" level="FAIL">No browser is open</msg>
+<status status="FAIL" endtime="20170816 17:54:48.855" starttime="20170816 17:54:48.854"></status>
+</kw>
+<msg timestamp="20170816 17:54:48.855" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: No browser is open</msg>
+<msg timestamp="20170816 17:54:48.856" level="FAIL">No browser is open</msg>
+<status status="FAIL" endtime="20170816 17:54:48.856" starttime="20170816 17:54:48.853"></status>
+</kw>
+<status status="FAIL" endtime="20170816 17:54:48.856" starttime="20170816 17:54:48.853"></status>
+</kw>
+<doc>Ensure that the OlderPosts button should available in the webpage.</doc>
+<status status="FAIL" endtime="20170816 17:54:48.857" critical="yes" starttime="20170816 17:54:48.852">No browser is open</status>
+</test>
+<test id="s1-s1-s1-s1-s1-s1-s1-t6" name="Test RssLinkVerification">
+<kw name="RssLinkVerification" library="BlogPageKeyword">
+<kw name="Go To" library="Selenium2Library">
+<doc>Navigates the active browser instance to the provided URL.</doc>
+<arguments>
+<arg>${RssLinkVerificationURL}</arg>
+</arguments>
+<msg timestamp="20170816 17:54:48.858" level="INFO">Opening url 'http://shredit-qa.ecentricarts.com/en-us/blog/securing-your-information'</msg>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<msg timestamp="20170816 17:54:48.860" level="FAIL">No browser is open</msg>
+<status status="FAIL" endtime="20170816 17:54:48.860" starttime="20170816 17:54:48.859"></status>
+</kw>
+<msg timestamp="20170816 17:54:48.860" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: No browser is open</msg>
+<msg timestamp="20170816 17:54:48.861" level="FAIL">No browser is open</msg>
+<status status="FAIL" endtime="20170816 17:54:48.861" starttime="20170816 17:54:48.858"></status>
+</kw>
+<status status="FAIL" endtime="20170816 17:54:48.861" starttime="20170816 17:54:48.858"></status>
+</kw>
+<doc>Ensure that RSS LinkVerification link is clickable and check whether the navigating page is correct.</doc>
+<status status="FAIL" endtime="20170816 17:54:48.861" critical="yes" starttime="20170816 17:54:48.857">No browser is open</status>
+</test>
+<kw type="teardown" name="Close All Browsers" library="Selenium2Library">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" endtime="20170816 17:54:48.863" starttime="20170816 17:54:48.862"></status>
+</kw>
+<status status="FAIL" endtime="20170816 17:54:48.863" starttime="20170816 17:54:48.542"></status>
+</suite>
+<status status="FAIL" endtime="20170816 17:54:48.865" starttime="20170816 17:54:48.540"></status>
+</suite>
+<suite source="C:\Users\abharath\Downloads\robotframework-selenium2library-java-master\src\test\robotframework\testsuites\eca.getQuoteTest" id="s1-s1-s1-s1-s1-s2" name="eca.getQuoteTest">
+<suite source="C:\Users\abharath\Downloads\robotframework-selenium2library-java-master\src\test\robotframework\testsuites\eca.getQuoteTest\GetHardDriverQuoteTest.txt" id="s1-s1-s1-s1-s1-s2-s1" name="GetHardDriverQuoteTest">
+<kw type="setup" name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to given URL.</doc>
+<arguments>
+<arg>http://shredit-qa.ecentricarts.com/en-us/home</arg>
+</arguments>
+<msg timestamp="20170816 17:54:48.875" level="INFO">Opening browser 'firefox' to base url 'http://shredit-qa.ecentricarts.com/en-us/home'</msg>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<msg timestamp="20170816 17:54:48.882" level="FAIL">No browser is open</msg>
+<status status="FAIL" endtime="20170816 17:54:48.883" starttime="20170816 17:54:48.881"></status>
+</kw>
+<msg timestamp="20170816 17:54:48.883" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: No browser is open</msg>
+<msg timestamp="20170816 17:54:48.884" level="FAIL">WebDriverException: Message: 'geckodriver' executable needs to be in PATH. 
+</msg>
+<status status="FAIL" endtime="20170816 17:54:48.884" starttime="20170816 17:54:48.875"></status>
+</kw>
+<test id="s1-s1-s1-s1-s1-s2-s1-t1" name="Hard Drive Destruction -- Header Get Quote">
+<doc>Goto to HD destrction page ---&gt; Click Header Get Quote ---&gt; Select HardDriveShredding type ---&gt; Enter company Info ---&gt; Enter Your Info ---&gt; Enter Additional Info ---&gt; Submit and verify Thankyou message is poped out</doc>
+<status status="FAIL" endtime="20170816 17:54:48.886" critical="yes" starttime="20170816 17:54:48.885">Parent suite setup failed:
+WebDriverException: Message: 'geckodriver' executable needs to be in PATH. 
+</status>
+</test>
+<test id="s1-s1-s1-s1-s1-s2-s1-t2" name="hdDestruction_Header_RegularPaperQuote">
+<status status="FAIL" endtime="20170816 17:54:48.887" critical="yes" starttime="20170816 17:54:48.886">Parent suite setup failed:
+WebDriverException: Message: 'geckodriver' executable needs to be in PATH. 
+</status>
+</test>
+<test id="s1-s1-s1-s1-s1-s2-s1-t3" name="hdDestruction_Header_HardDriveQuote">
+<status status="FAIL" endtime="20170816 17:54:48.888" critical="yes" starttime="20170816 17:54:48.888">Parent suite setup failed:
+WebDriverException: Message: 'geckodriver' executable needs to be in PATH. 
+</status>
+</test>
+<test id="s1-s1-s1-s1-s1-s2-s1-t4" name="hdDestruction_Header_OtherMaterialQuote">
+<status status="FAIL" endtime="20170816 17:54:48.889" critical="yes" starttime="20170816 17:54:48.889">Parent suite setup failed:
+WebDriverException: Message: 'geckodriver' executable needs to be in PATH. 
+</status>
+</test>
+<test id="s1-s1-s1-s1-s1-s2-s1-t5" name="hdDestruction_Shearing_PaperQuote">
+<status status="FAIL" endtime="20170816 17:54:48.890" critical="yes" starttime="20170816 17:54:48.890">Parent suite setup failed:
+WebDriverException: Message: 'geckodriver' executable needs to be in PATH. 
+</status>
+</test>
+<test id="s1-s1-s1-s1-s1-s2-s1-t6" name="hdDestruction_Shearing__RegularPaperQuote">
+<status status="FAIL" endtime="20170816 17:54:48.891" critical="yes" starttime="20170816 17:54:48.891">Parent suite setup failed:
+WebDriverException: Message: 'geckodriver' executable needs to be in PATH. 
+</status>
+</test>
+<test id="s1-s1-s1-s1-s1-s2-s1-t7" name="hdDestruction_Shearing__HardDriveQuote">
+<status status="FAIL" endtime="20170816 17:54:48.893" critical="yes" starttime="20170816 17:54:48.892">Parent suite setup failed:
+WebDriverException: Message: 'geckodriver' executable needs to be in PATH. 
+</status>
+</test>
+<test id="s1-s1-s1-s1-s1-s2-s1-t8" name="hdDestruction_Shearing__OtherMaterialQuote">
+<status status="FAIL" endtime="20170816 17:54:48.894" critical="yes" starttime="20170816 17:54:48.893">Parent suite setup failed:
+WebDriverException: Message: 'geckodriver' executable needs to be in PATH. 
+</status>
+</test>
+<test id="s1-s1-s1-s1-s1-s2-s1-t9" name="hdDestruction_HDCrushing_PaperQuote">
+<status status="FAIL" endtime="20170816 17:54:48.895" critical="yes" starttime="20170816 17:54:48.894">Parent suite setup failed:
+WebDriverException: Message: 'geckodriver' executable needs to be in PATH. 
+</status>
+</test>
+<test id="s1-s1-s1-s1-s1-s2-s1-t10" name="hdDestruction_Crushing_RegularPaperQuote">
+<status status="FAIL" endtime="20170816 17:54:48.896" critical="yes" starttime="20170816 17:54:48.895">Parent suite setup failed:
+WebDriverException: Message: 'geckodriver' executable needs to be in PATH. 
+</status>
+</test>
+<test id="s1-s1-s1-s1-s1-s2-s1-t11" name="hdDestruction_Crushing_HardDriveQuote">
+<status status="FAIL" endtime="20170816 17:54:48.897" critical="yes" starttime="20170816 17:54:48.897">Parent suite setup failed:
+WebDriverException: Message: 'geckodriver' executable needs to be in PATH. 
+</status>
+</test>
+<test id="s1-s1-s1-s1-s1-s2-s1-t12" name="hdDestruction_Crushing_OtherMaterialQuote">
+<status status="FAIL" endtime="20170816 17:54:48.898" critical="yes" starttime="20170816 17:54:48.898">Parent suite setup failed:
+WebDriverException: Message: 'geckodriver' executable needs to be in PATH. 
+</status>
+</test>
+<kw type="teardown" name="Close All Browsers" library="Selenium2Library">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" endtime="20170816 17:54:48.899" starttime="20170816 17:54:48.899"></status>
+</kw>
+<status status="FAIL" endtime="20170816 17:54:48.900" starttime="20170816 17:54:48.868">Suite setup failed:
+WebDriverException: Message: 'geckodriver' executable needs to be in PATH. 
+</status>
+</suite>
+<suite source="C:\Users\abharath\Downloads\robotframework-selenium2library-java-master\src\test\robotframework\testsuites\eca.getQuoteTest\GetHomeAndFooterQuoteTest.txt" id="s1-s1-s1-s1-s1-s2-s2" name="GetHomeAndFooterQuoteTest">
+<kw type="setup" name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to given URL.</doc>
+<arguments>
+<arg>http://shredit-qa.ecentricarts.com/en-us/home</arg>
+</arguments>
+<msg timestamp="20170816 17:54:48.907" level="INFO">Opening browser 'firefox' to base url 'http://shredit-qa.ecentricarts.com/en-us/home'</msg>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<msg timestamp="20170816 17:54:48.914" level="FAIL">No browser is open</msg>
+<status status="FAIL" endtime="20170816 17:54:48.914" starttime="20170816 17:54:48.912"></status>
+</kw>
+<msg timestamp="20170816 17:54:48.914" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: No browser is open</msg>
+<msg timestamp="20170816 17:54:48.915" level="FAIL">WebDriverException: Message: 'geckodriver' executable needs to be in PATH. 
+</msg>
+<status status="FAIL" endtime="20170816 17:54:48.915" starttime="20170816 17:54:48.906"></status>
+</kw>
+<test id="s1-s1-s1-s1-s1-s2-s2-t1" name="homeOnePurgeQuote">
+<status status="FAIL" endtime="20170816 17:54:48.916" critical="yes" starttime="20170816 17:54:48.915">Parent suite setup failed:
+WebDriverException: Message: 'geckodriver' executable needs to be in PATH. 
+</status>
+</test>
+<test id="s1-s1-s1-s1-s1-s2-s2-t2" name="homeRegularPaperQuote">
+<status status="FAIL" endtime="20170816 17:54:48.917" critical="yes" starttime="20170816 17:54:48.916">Parent suite setup failed:
+WebDriverException: Message: 'geckodriver' executable needs to be in PATH. 
+</status>
+</test>
+<test id="s1-s1-s1-s1-s1-s2-s2-t3" name="homeHardDriveQuote">
+<status status="FAIL" endtime="20170816 17:54:48.918" critical="yes" starttime="20170816 17:54:48.918">Parent suite setup failed:
+WebDriverException: Message: 'geckodriver' executable needs to be in PATH. 
+</status>
+</test>
+<test id="s1-s1-s1-s1-s1-s2-s2-t4" name="homeOtherMaterialQuote">
+<status status="FAIL" endtime="20170816 17:54:48.919" critical="yes" starttime="20170816 17:54:48.919">Parent suite setup failed:
+WebDriverException: Message: 'geckodriver' executable needs to be in PATH. 
+</status>
+</test>
+<test id="s1-s1-s1-s1-s1-s2-s2-t5" name="footerOnePurgeQuote">
+<status status="FAIL" endtime="20170816 17:54:48.920" critical="yes" starttime="20170816 17:54:48.920">Parent suite setup failed:
+WebDriverException: Message: 'geckodriver' executable needs to be in PATH. 
+</status>
+</test>
+<test id="s1-s1-s1-s1-s1-s2-s2-t6" name="footerRegularPaperQuote">
+<status status="FAIL" endtime="20170816 17:54:48.922" critical="yes" starttime="20170816 17:54:48.921">Parent suite setup failed:
+WebDriverException: Message: 'geckodriver' executable needs to be in PATH. 
+</status>
+</test>
+<test id="s1-s1-s1-s1-s1-s2-s2-t7" name="footerHardDriveQuote">
+<status status="FAIL" endtime="20170816 17:54:48.923" critical="yes" starttime="20170816 17:54:48.922">Parent suite setup failed:
+WebDriverException: Message: 'geckodriver' executable needs to be in PATH. 
+</status>
+</test>
+<test id="s1-s1-s1-s1-s1-s2-s2-t8" name="footerOtherMaterialQuote">
+<status status="FAIL" endtime="20170816 17:54:48.924" critical="yes" starttime="20170816 17:54:48.923">Parent suite setup failed:
+WebDriverException: Message: 'geckodriver' executable needs to be in PATH. 
+</status>
+</test>
+<kw type="teardown" name="Close All Browsers" library="Selenium2Library">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" endtime="20170816 17:54:48.925" starttime="20170816 17:54:48.925"></status>
+</kw>
+<status status="FAIL" endtime="20170816 17:54:48.925" starttime="20170816 17:54:48.902">Suite setup failed:
+WebDriverException: Message: 'geckodriver' executable needs to be in PATH. 
+</status>
+</suite>
+<suite source="C:\Users\abharath\Downloads\robotframework-selenium2library-java-master\src\test\robotframework\testsuites\eca.getQuoteTest\GetPaperShredQuoteTest.txt" id="s1-s1-s1-s1-s1-s2-s3" name="GetPaperShredQuoteTest">
+<kw type="setup" name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to given URL.</doc>
+<arguments>
+<arg>http://shredit-qa.ecentricarts.com/en-us/home</arg>
+</arguments>
+<msg timestamp="20170816 17:54:48.932" level="INFO">Opening browser 'firefox' to base url 'http://shredit-qa.ecentricarts.com/en-us/home'</msg>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<msg timestamp="20170816 17:54:48.938" level="FAIL">No browser is open</msg>
+<status status="FAIL" endtime="20170816 17:54:48.938" starttime="20170816 17:54:48.937"></status>
+</kw>
+<msg timestamp="20170816 17:54:48.939" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: No browser is open</msg>
+<msg timestamp="20170816 17:54:48.939" level="FAIL">WebDriverException: Message: 'geckodriver' executable needs to be in PATH. 
+</msg>
+<status status="FAIL" endtime="20170816 17:54:48.940" starttime="20170816 17:54:48.931"></status>
+</kw>
+<test id="s1-s1-s1-s1-s1-s2-s3-t1" name="paperShred_Header_OneTimePaperQuote">
+<status status="FAIL" endtime="20170816 17:54:48.940" critical="yes" starttime="20170816 17:54:48.940">Parent suite setup failed:
+WebDriverException: Message: 'geckodriver' executable needs to be in PATH. 
+</status>
+</test>
+<test id="s1-s1-s1-s1-s1-s2-s3-t2" name="paperShred_Header_RegularPaperQuote">
+<status status="FAIL" endtime="20170816 17:54:48.942" critical="yes" starttime="20170816 17:54:48.941">Parent suite setup failed:
+WebDriverException: Message: 'geckodriver' executable needs to be in PATH. 
+</status>
+</test>
+<test id="s1-s1-s1-s1-s1-s2-s3-t3" name="paperShred_Header_HardDriveQuote">
+<status status="FAIL" endtime="20170816 17:54:48.943" critical="yes" starttime="20170816 17:54:48.942">Parent suite setup failed:
+WebDriverException: Message: 'geckodriver' executable needs to be in PATH. 
+</status>
+</test>
+<test id="s1-s1-s1-s1-s1-s2-s3-t4" name="paperShred_Header_OtherMaterialQuote">
+<status status="FAIL" endtime="20170816 17:54:48.944" critical="yes" starttime="20170816 17:54:48.943">Parent suite setup failed:
+WebDriverException: Message: 'geckodriver' executable needs to be in PATH. 
+</status>
+</test>
+<test id="s1-s1-s1-s1-s1-s2-s3-t5" name="paperShredding_OneTime_PaperQuote">
+<status status="FAIL" endtime="20170816 17:54:48.945" critical="yes" starttime="20170816 17:54:48.944">Parent suite setup failed:
+WebDriverException: Message: 'geckodriver' executable needs to be in PATH. 
+</status>
+</test>
+<test id="s1-s1-s1-s1-s1-s2-s3-t6" name="paperShredding_OneTime_RegularPaperQuote">
+<status status="FAIL" endtime="20170816 17:54:48.946" critical="yes" starttime="20170816 17:54:48.945">Parent suite setup failed:
+WebDriverException: Message: 'geckodriver' executable needs to be in PATH. 
+</status>
+</test>
+<test id="s1-s1-s1-s1-s1-s2-s3-t7" name="paperShredding_OneTime_HardDriveQuote">
+<status status="FAIL" endtime="20170816 17:54:48.947" critical="yes" starttime="20170816 17:54:48.947">Parent suite setup failed:
+WebDriverException: Message: 'geckodriver' executable needs to be in PATH. 
+</status>
+</test>
+<test id="s1-s1-s1-s1-s1-s2-s3-t8" name="paperShredding_OneTime_OtherMaterialQuote">
+<status status="FAIL" endtime="20170816 17:54:48.948" critical="yes" starttime="20170816 17:54:48.948">Parent suite setup failed:
+WebDriverException: Message: 'geckodriver' executable needs to be in PATH. 
+</status>
+</test>
+<test id="s1-s1-s1-s1-s1-s2-s3-t9" name="paperShredding_Regularly_PaperQuote">
+<status status="FAIL" endtime="20170816 17:54:48.949" critical="yes" starttime="20170816 17:54:48.949">Parent suite setup failed:
+WebDriverException: Message: 'geckodriver' executable needs to be in PATH. 
+</status>
+</test>
+<test id="s1-s1-s1-s1-s1-s2-s3-t10" name="paperShredding_Regularly_RegularPaperQuote">
+<status status="FAIL" endtime="20170816 17:54:48.950" critical="yes" starttime="20170816 17:54:48.950">Parent suite setup failed:
+WebDriverException: Message: 'geckodriver' executable needs to be in PATH. 
+</status>
+</test>
+<test id="s1-s1-s1-s1-s1-s2-s3-t11" name="paperShredding_Regularly_HardDriveQuote">
+<status status="FAIL" endtime="20170816 17:54:48.951" critical="yes" starttime="20170816 17:54:48.951">Parent suite setup failed:
+WebDriverException: Message: 'geckodriver' executable needs to be in PATH. 
+</status>
+</test>
+<test id="s1-s1-s1-s1-s1-s2-s3-t12" name="paperShredding_Regularly_OtherMaterialQuote">
+<status status="FAIL" endtime="20170816 17:54:48.953" critical="yes" starttime="20170816 17:54:48.952">Parent suite setup failed:
+WebDriverException: Message: 'geckodriver' executable needs to be in PATH. 
+</status>
+</test>
+<kw type="teardown" name="Close All Browsers" library="Selenium2Library">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" endtime="20170816 17:54:48.954" starttime="20170816 17:54:48.953"></status>
+</kw>
+<status status="FAIL" endtime="20170816 17:54:48.954" starttime="20170816 17:54:48.927">Suite setup failed:
+WebDriverException: Message: 'geckodriver' executable needs to be in PATH. 
+</status>
+</suite>
+<status status="FAIL" endtime="20170816 17:54:48.957" starttime="20170816 17:54:48.866"></status>
+</suite>
+<suite source="C:\Users\abharath\Downloads\robotframework-selenium2library-java-master\src\test\robotframework\testsuites\ShredIt-SignUP" id="s1-s1-s1-s1-s1-s3" name="ShredIt-SignUP">
+<suite source="C:\Users\abharath\Downloads\robotframework-selenium2library-java-master\src\test\robotframework\testsuites\ShredIt-SignUP\SignUpTest.txt" id="s1-s1-s1-s1-s1-s3-s1" name="SignUpTest">
+<test id="s1-s1-s1-s1-s1-s3-s1-t1" name="HomeSignupTest">
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to given URL.</doc>
+<arguments>
+<arg>${URL Application}</arg>
+</arguments>
+<msg timestamp="20170816 17:54:48.968" level="INFO">Opening browser 'firefox' to base url 'http://shredit-qa.ecentricarts.com/en-us/home'</msg>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<msg timestamp="20170816 17:54:48.975" level="FAIL">No browser is open</msg>
+<status status="FAIL" endtime="20170816 17:54:48.976" starttime="20170816 17:54:48.974"></status>
+</kw>
+<msg timestamp="20170816 17:54:48.976" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: No browser is open</msg>
+<msg timestamp="20170816 17:54:48.976" level="FAIL">WebDriverException: Message: 'geckodriver' executable needs to be in PATH. 
+</msg>
+<status status="FAIL" endtime="20170816 17:54:48.977" starttime="20170816 17:54:48.968"></status>
+</kw>
+<status status="FAIL" endtime="20170816 17:54:48.977" critical="yes" starttime="20170816 17:54:48.967">WebDriverException: Message: 'geckodriver' executable needs to be in PATH. 
+</status>
+</test>
+<test id="s1-s1-s1-s1-s1-s3-s1-t2" name="ServiceSignupTest">
+<kw name="Go To" library="Selenium2Library">
+<doc>Navigates the active browser instance to the provided URL.</doc>
+<arguments>
+<arg>${shredding-services-URL}</arg>
+</arguments>
+<msg timestamp="20170816 17:54:48.979" level="INFO">Opening url 'http://shredit-qa.ecentricarts.com/en-us/secure-shredding-services'</msg>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<msg timestamp="20170816 17:54:48.980" level="FAIL">No browser is open</msg>
+<status status="FAIL" endtime="20170816 17:54:48.981" starttime="20170816 17:54:48.979"></status>
+</kw>
+<msg timestamp="20170816 17:54:48.981" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: No browser is open</msg>
+<msg timestamp="20170816 17:54:48.981" level="FAIL">No browser is open</msg>
+<status status="FAIL" endtime="20170816 17:54:48.981" starttime="20170816 17:54:48.978"></status>
+</kw>
+<status status="FAIL" endtime="20170816 17:54:48.982" critical="yes" starttime="20170816 17:54:48.978">No browser is open</status>
+</test>
+<test id="s1-s1-s1-s1-s1-s3-s1-t3" name="PricingSignUpTest">
+<kw name="Go To" library="Selenium2Library">
+<doc>Navigates the active browser instance to the provided URL.</doc>
+<arguments>
+<arg>${Pricing-URL}</arg>
+</arguments>
+<msg timestamp="20170816 17:54:48.983" level="INFO">Opening url 'http://shredit-qa.ecentricarts.com/en-us/pricing'</msg>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<msg timestamp="20170816 17:54:48.985" level="FAIL">No browser is open</msg>
+<status status="FAIL" endtime="20170816 17:54:48.985" starttime="20170816 17:54:48.983"></status>
+</kw>
+<msg timestamp="20170816 17:54:48.985" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: No browser is open</msg>
+<msg timestamp="20170816 17:54:48.986" level="FAIL">No browser is open</msg>
+<status status="FAIL" endtime="20170816 17:54:48.986" starttime="20170816 17:54:48.983"></status>
+</kw>
+<status status="FAIL" endtime="20170816 17:54:48.986" critical="yes" starttime="20170816 17:54:48.982">No browser is open</status>
+</test>
+<test id="s1-s1-s1-s1-s1-s3-s1-t4" name="ResourceCenterSignUpTest">
+<kw name="Go To" library="Selenium2Library">
+<doc>Navigates the active browser instance to the provided URL.</doc>
+<arguments>
+<arg>${resource-center-URL}</arg>
+</arguments>
+<msg timestamp="20170816 17:54:48.988" level="INFO">Opening url 'http://shredit-qa.ecentricarts.com/en-us/resource-center'</msg>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<msg timestamp="20170816 17:54:48.989" level="FAIL">No browser is open</msg>
+<status status="FAIL" endtime="20170816 17:54:48.990" starttime="20170816 17:54:48.988"></status>
+</kw>
+<msg timestamp="20170816 17:54:48.990" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: No browser is open</msg>
+<msg timestamp="20170816 17:54:48.990" level="FAIL">No browser is open</msg>
+<status status="FAIL" endtime="20170816 17:54:48.991" starttime="20170816 17:54:48.987"></status>
+</kw>
+<status status="FAIL" endtime="20170816 17:54:48.991" critical="yes" starttime="20170816 17:54:48.987">No browser is open</status>
+</test>
+<test id="s1-s1-s1-s1-s1-s3-s1-t5" name="AboutSignUpTest">
+<kw name="Go To" library="Selenium2Library">
+<doc>Navigates the active browser instance to the provided URL.</doc>
+<arguments>
+<arg>${about-URL}</arg>
+</arguments>
+<msg timestamp="20170816 17:54:48.992" level="INFO">Opening url 'http://shredit-qa.ecentricarts.com/en-us/about'</msg>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<msg timestamp="20170816 17:54:48.994" level="FAIL">No browser is open</msg>
+<status status="FAIL" endtime="20170816 17:54:48.994" starttime="20170816 17:54:48.993"></status>
+</kw>
+<msg timestamp="20170816 17:54:48.994" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: No browser is open</msg>
+<msg timestamp="20170816 17:54:48.995" level="FAIL">No browser is open</msg>
+<status status="FAIL" endtime="20170816 17:54:48.995" starttime="20170816 17:54:48.992"></status>
+</kw>
+<status status="FAIL" endtime="20170816 17:54:48.996" critical="yes" starttime="20170816 17:54:48.991">No browser is open</status>
+</test>
+<test id="s1-s1-s1-s1-s1-s3-s1-t6" name="FAQSignUpTest">
+<kw name="Go To" library="Selenium2Library">
+<doc>Navigates the active browser instance to the provided URL.</doc>
+<arguments>
+<arg>http://shredit-qa.ecentricarts.com/en-us/faqs</arg>
+</arguments>
+<msg timestamp="20170816 17:54:48.997" level="INFO">Opening url 'http://shredit-qa.ecentricarts.com/en-us/faqs'</msg>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<msg timestamp="20170816 17:54:48.999" level="FAIL">No browser is open</msg>
+<status status="FAIL" endtime="20170816 17:54:48.999" starttime="20170816 17:54:48.997"></status>
+</kw>
+<msg timestamp="20170816 17:54:48.999" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: No browser is open</msg>
+<msg timestamp="20170816 17:54:49.000" level="FAIL">No browser is open</msg>
+<status status="FAIL" endtime="20170816 17:54:49.000" starttime="20170816 17:54:48.997"></status>
+</kw>
+<status status="FAIL" endtime="20170816 17:54:49.001" critical="yes" starttime="20170816 17:54:48.996">No browser is open</status>
+</test>
+<kw type="teardown" name="Close All Browsers" library="Selenium2Library">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" endtime="20170816 17:54:49.002" starttime="20170816 17:54:49.002"></status>
+</kw>
+<status status="FAIL" endtime="20170816 17:54:49.002" starttime="20170816 17:54:48.963"></status>
+</suite>
+<status status="FAIL" endtime="20170816 17:54:49.005" starttime="20170816 17:54:48.961"></status>
+</suite>
+<status status="FAIL" endtime="20170816 17:54:49.008" starttime="20170816 17:54:48.539"></status>
+</suite>
+<status status="FAIL" endtime="20170816 17:54:49.014" starttime="20170816 17:54:48.536"></status>
+</suite>
+<status status="FAIL" endtime="20170816 17:54:49.020" starttime="20170816 17:54:48.535"></status>
+</suite>
+<status status="FAIL" endtime="20170816 17:54:49.027" starttime="20170816 17:54:48.532"></status>
+</suite>
+<status status="FAIL" endtime="20170816 17:54:49.033" starttime="20170816 17:54:48.486"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="44" pass="0">Critical Tests</stat>
+<stat fail="44" pass="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat fail="44" id="s1" name="Robotframework-Selenium2Library-Java-Master" pass="0">Robotframework-Selenium2Library-Java-Master</stat>
+<stat fail="44" id="s1-s1" name="Src" pass="0">Robotframework-Selenium2Library-Java-Master.Src</stat>
+<stat fail="44" id="s1-s1-s1" name="Test" pass="0">Robotframework-Selenium2Library-Java-Master.Src.Test</stat>
+<stat fail="44" id="s1-s1-s1-s1" name="Robotframework" pass="0">Robotframework-Selenium2Library-Java-Master.Src.Test.Robotframework</stat>
+<stat fail="44" id="s1-s1-s1-s1-s1" name="Testsuites" pass="0">Robotframework-Selenium2Library-Java-Master.Src.Test.Robotframework.Testsuites</stat>
+<stat fail="6" id="s1-s1-s1-s1-s1-s1" name="eca.blogDetailsTest" pass="0">Robotframework-Selenium2Library-Java-Master.Src.Test.Robotframework.Testsuites.eca.blogDetailsTest</stat>
+<stat fail="6" id="s1-s1-s1-s1-s1-s1-s1" name="BlogPageTest" pass="0">Robotframework-Selenium2Library-Java-Master.Src.Test.Robotframework.Testsuites.eca.blogDetailsTest.BlogPageTest</stat>
+<stat fail="32" id="s1-s1-s1-s1-s1-s2" name="eca.getQuoteTest" pass="0">Robotframework-Selenium2Library-Java-Master.Src.Test.Robotframework.Testsuites.eca.getQuoteTest</stat>
+<stat fail="12" id="s1-s1-s1-s1-s1-s2-s1" name="GetHardDriverQuoteTest" pass="0">Robotframework-Selenium2Library-Java-Master.Src.Test.Robotframework.Testsuites.eca.getQuoteTest.GetHardDriverQuoteTest</stat>
+<stat fail="8" id="s1-s1-s1-s1-s1-s2-s2" name="GetHomeAndFooterQuoteTest" pass="0">Robotframework-Selenium2Library-Java-Master.Src.Test.Robotframework.Testsuites.eca.getQuoteTest.GetHomeAndFooterQuoteTest</stat>
+<stat fail="12" id="s1-s1-s1-s1-s1-s2-s3" name="GetPaperShredQuoteTest" pass="0">Robotframework-Selenium2Library-Java-Master.Src.Test.Robotframework.Testsuites.eca.getQuoteTest.GetPaperShredQuoteTest</stat>
+<stat fail="6" id="s1-s1-s1-s1-s1-s3" name="ShredIt-SignUP" pass="0">Robotframework-Selenium2Library-Java-Master.Src.Test.Robotframework.Testsuites.ShredIt-SignUP</stat>
+<stat fail="6" id="s1-s1-s1-s1-s1-s3-s1" name="SignUpTest" pass="0">Robotframework-Selenium2Library-Java-Master.Src.Test.Robotframework.Testsuites.ShredIt-SignUP.SignUpTest</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20170816 17:54:48.834" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: No browser is open</msg>
+<msg timestamp="20170816 17:54:48.840" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: No browser is open</msg>
+<msg timestamp="20170816 17:54:48.850" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: No browser is open</msg>
+<msg timestamp="20170816 17:54:48.855" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: No browser is open</msg>
+<msg timestamp="20170816 17:54:48.860" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: No browser is open</msg>
+<msg timestamp="20170816 17:54:48.883" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: No browser is open</msg>
+<msg timestamp="20170816 17:54:48.914" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: No browser is open</msg>
+<msg timestamp="20170816 17:54:48.939" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: No browser is open</msg>
+<msg timestamp="20170816 17:54:48.976" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: No browser is open</msg>
+<msg timestamp="20170816 17:54:48.981" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: No browser is open</msg>
+<msg timestamp="20170816 17:54:48.985" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: No browser is open</msg>
+<msg timestamp="20170816 17:54:48.990" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: No browser is open</msg>
+<msg timestamp="20170816 17:54:48.994" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: No browser is open</msg>
+<msg timestamp="20170816 17:54:48.999" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: No browser is open</msg>
+</errors>
+</robot>

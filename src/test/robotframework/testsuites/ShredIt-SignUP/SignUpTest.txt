@@ -24,11 +24,11 @@ HomeSignupTest
     Input Text Field    //*[@id='p_lt_ctl12_pageplaceholder_p_lt_ctl12_SIR_StayInformedForm_BizForm_Email_txtText']    test@ecentricarts.com
     Input Text Field    //*[@id='p_lt_ctl12_pageplaceholder_p_lt_ctl12_SIR_StayInformedForm_BizForm_Company_txtText']    Ecentricarts
     Wait Until Element Is Visible    //div[@class='form-element-wrap one_fifth form-button']    30
-    Click Element    //div[@class='form-element-wrap one_fifth form-button']
+    #Click Element    //div[@class='form-element-wrap one_fifth form-button']
 
 ServiceSignupTest
     
-    GoTo    ${shredding-services-URL}
+    #GoTo    ${shredding-services-URL}
     Wait Until Element Is Visible    //div[@class='form-element']//input[@id='p_lt_ctl12_pageplaceholder_p_lt_ctl08_SIR_StayInformedForm_BizForm_FirstName_txtText']    40
     Input Text    //input[@id='p_lt_ctl12_pageplaceholder_p_lt_ctl08_SIR_StayInformedForm_BizForm_FirstName_txtText']     Test
     Input Text    //*[@id='p_lt_ctl12_pageplaceholder_p_lt_ctl08_SIR_StayInformedForm_BizForm_LastName_txtText']     TestLastName
